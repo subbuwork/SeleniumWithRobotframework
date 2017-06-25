@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170625 16:38:57.778" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\subbu\PycharmProjects\SeleniumWithRobotframework\Tests\TestMyntra.robot" id="s1" name="TestMyntra">
+<test id="s1-t1" name="Test_Search_product">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>@{BROWSER}[0]</arg>
+</arguments>
+<msg timestamp="20170625 16:38:58.036" level="INFO">Opening browser 'firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170625 16:39:03.778" starttime="20170625 16:38:58.035"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170625 16:39:03.825" starttime="20170625 16:39:03.779"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:03.826" starttime="20170625 16:38:58.035"></status>
+</kw>
+<kw name="Landing Page" library="Myntra">
+<kw name="Home Page" library="LandingPage">
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20170625 16:39:03.832" level="INFO">Opening url 'https://www.myntra.com'</msg>
+<status status="PASS" endtime="20170625 16:39:08.221" starttime="20170625 16:39:03.831"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the root output directory for captured screenshots.</doc>
+<arguments>
+<arg>./Screenshots</arg>
+</arguments>
+<status status="PASS" endtime="20170625 16:39:08.222" starttime="20170625 16:39:08.221"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>LandingPage.png</arg>
+</arguments>
+<msg timestamp="20170625 16:39:08.433" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/LandingPage.png"&gt;&lt;img src="../Screenshots/LandingPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170625 16:39:08.434" starttime="20170625 16:39:08.222"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:08.434" starttime="20170625 16:39:03.830"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:08.434" starttime="20170625 16:39:03.829"></status>
+</kw>
+<kw name="Search for product" library="Myntra">
+<kw name="Search Product" library="TopSearch">
+<arguments>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the root output directory for captured screenshots.</doc>
+<arguments>
+<arg>./Screenshots</arg>
+</arguments>
+<status status="PASS" endtime="20170625 16:39:08.437" starttime="20170625 16:39:08.436"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>homepage.png</arg>
+</arguments>
+<msg timestamp="20170625 16:39:08.688" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/homepage.png"&gt;&lt;img src="../Screenshots/homepage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170625 16:39:08.689" starttime="20170625 16:39:08.438"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//header[@id='desktop-header-cnt']/div/div[3]/input</arg>
+<arg>${search_key}</arg>
+</arguments>
+<msg timestamp="20170625 16:39:08.690" level="INFO">Typing text 'Men's Wear' into text field 'xpath=//header[@id='desktop-header-cnt']/div/div[3]/input'</msg>
+<status status="PASS" endtime="20170625 16:39:09.140" starttime="20170625 16:39:08.689"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//header[@id='desktop-header-cnt']/div/div[3]/a</arg>
+</arguments>
+<msg timestamp="20170625 16:39:09.140" level="INFO">Clicking element 'xpath=//header[@id='desktop-header-cnt']/div/div[3]/a'.</msg>
+<status status="PASS" endtime="20170625 16:39:12.121" starttime="20170625 16:39:09.140"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the root output directory for captured screenshots.</doc>
+<arguments>
+<arg>./Screenshots</arg>
+</arguments>
+<status status="PASS" endtime="20170625 16:39:12.122" starttime="20170625 16:39:12.121"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>SearchResults.png</arg>
+</arguments>
+<msg timestamp="20170625 16:39:12.306" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/SearchResults.png"&gt;&lt;img src="../Screenshots/SearchResults.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170625 16:39:12.307" starttime="20170625 16:39:12.123"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:12.307" starttime="20170625 16:39:08.436"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:12.307" starttime="20170625 16:39:08.435"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<status status="PASS" endtime="20170625 16:39:12.354" starttime="20170625 16:39:12.308"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170625 16:39:12.773" starttime="20170625 16:39:12.355"></status>
+</kw>
+<status status="PASS" endtime="20170625 16:39:12.773" starttime="20170625 16:39:12.355"></status>
+</kw>
+<tags>
+<tag>search</tag>
+</tags>
+<status status="PASS" endtime="20170625 16:39:12.774" critical="yes" starttime="20170625 16:38:58.032"></status>
+</test>
+<status status="PASS" endtime="20170625 16:39:12.775" starttime="20170625 16:38:57.781"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">search</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestMyntra" pass="1">TestMyntra</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
