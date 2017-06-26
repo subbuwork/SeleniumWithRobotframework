@@ -10,11 +10,13 @@ Resource  ./PO/LandingPage.robot
 
 *** Keywords ***
 Landing Page
-    LandingPage.Home Page  ${START_URL}
+    [Arguments]  ${start_url}
+    LandingPage.Home Page  ${start_url}
 
 
 Search for product
-    TopSearch.Search Product  ${SEARCH_TERM}
+    [Arguments]  ${search_term}
+    TopSearch.Search Product  ${search_term}
 
 Select Product
     SearchResults.Select Product
